@@ -16,7 +16,7 @@
                 <a class="nav-link" href="#">Features</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="">area ADMIN</a>
+                <a class="nav-link" href="#">area ADMIN</a>
               </li>
             </ul>
             <span class="navbar-text">
