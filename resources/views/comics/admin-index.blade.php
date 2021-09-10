@@ -24,7 +24,7 @@
           <td>{{$comic->series}}</td>
           <td>{{$comic->price}}</td>
           <td>
-            <a href="{{route('admin.show', $comics->id)}}" class="btn btn-primary w-75">info</a>
+            <a href="{{route('admin.show', [$comic->id])}}" class="btn btn-primary w-75">info</a>
             <a href="" class="btn btn-danger w-75">modifica</a>
             <a href="" class="btn btn-success w-75">elimina</a>
             
@@ -36,5 +36,4 @@
     </tbody>
   </table>
 
-  {{ $comics->links()}}
 @endsection
