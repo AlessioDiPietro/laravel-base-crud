@@ -4,12 +4,7 @@
 
 @section('main-content')
 <div class="container">
-  @if (session('update'))
-    <div><strong>{{session('update')}}</strong></div>
-  @endif
-  @if (session('delete'))
-    <div><strong>{{session('delete')}}</strong></div>
-  @endif
+  
     <form action="{{route('admin.update', $comic->id)}}" method="post">
         @csrf
         <div class="form-group">

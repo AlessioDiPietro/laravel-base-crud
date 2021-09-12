@@ -2,6 +2,12 @@
 @section('title', 'area admin')
 
 @section('main-content')
+  @if (session('update'))
+      <div><strong>{{session('update')}}</strong></div>
+    @endif
+    @if (session('delete'))
+      <div><strong>{{session('delete')}}</strong></div>
+    @endif
   <table class="table">
     <thead>
       <tr>
@@ -24,9 +30,18 @@
           <td>{{$comic->series}}</td>
           <td>{{$comic->price}}</td>
           <td>
-            <a href="{{route('admin.show', [$comic->id])}}" class="btn btn-primary w-75">info</a>
-            <a href="{{route('admin.edit', [$comic->id])}}" class="btn btn-danger w-75">modifica</a>
-            <a href="" class="btn btn-success w-75">elimina</a>
+
+            <a href="{{route('admin.show', [$comic->id])}}" class="btn btn-success w-100">info</a>
+
+
+            <a href="{{route('admin.edit', [$comic->id])}}" class="btn btn-primary w-100 text-center">modifica</a>
+
+
+            <form action="{{ route ('admin.destroy', $comic->id)}}" method="post" class="w-100">
+              @csrf
+              @method('DELETE')
+              <input  type="submit" value='delete' class="btn btn-danger w-100">
+            </form>
             
           </td>
         </tr>
