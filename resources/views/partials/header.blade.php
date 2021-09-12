@@ -13,10 +13,10 @@
                 <a class="nav-link active" aria-current="page" href="#">Perchè noi</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Features</a>
+                <a class="nav-link" href="{{route('admin.create')}}">aggiungi un fumetto</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">area ADMIN</a>
+                <a class="nav-link" href="{{route('admin.index')}}">area ADMIN</a>
               </li>
             </ul>
             <span class="navbar-text">
